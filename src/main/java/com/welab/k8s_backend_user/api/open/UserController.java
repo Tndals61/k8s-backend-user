@@ -26,9 +26,5 @@ public class UserController {
         return "Welcome to user service: Remote Message = " + remoteMessage;
     }
 
-    @PostMapping(value = "/register")
-    public ApiResponseDto<String> register(@RequestBody @Valid SiteUserRegisterDto registerDto) {
-        siteUserService.registerUser(registerDto);
-        return ApiResponseDto.defaultOk();
-    }
+
 }
