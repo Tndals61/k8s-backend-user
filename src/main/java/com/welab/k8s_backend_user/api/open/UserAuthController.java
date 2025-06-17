@@ -32,4 +32,9 @@ public class UserAuthController {
         TokenDto.AcessRefreshToken token = siteUserService.login(loginDto);
         return ApiResponseDto.createOk(token);
     }
+
+    @GetMapping(value = "/test")
+    public ApiResponseDto<String> test() {
+        return ApiResponseDto.createOk("버전 1 입니다");
+    }
 }
